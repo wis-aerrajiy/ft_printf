@@ -6,7 +6,7 @@
 /*   By: aerrajiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 18:26:53 by aerrajiy          #+#    #+#             */
-/*   Updated: 2022/10/23 20:55:53 by aerrajiy         ###   ########.fr       */
+/*   Updated: 2022/10/24 02:03:03 by aerrajiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,19 +38,22 @@ int ft_printf(char *str, ...)
 {
     va_list ptr;
     int i;
+    int count;
     i = 0;
+    count = 0;
     va_start(ptr, str);
 
     while (str[i])
     {
         if (str[i] == '%')
         {
-            show(ptr, str[i + 1]);
+            count += show(ptr, str[i + 1]);
             i++;
         }
         else
-            ft_putchar(1, str[i]);
+            count += ft_putchar(1, str[i]);
         i++;
     }
-    return (i);
+    printf("count => %d", count);
+    return (count);
 }

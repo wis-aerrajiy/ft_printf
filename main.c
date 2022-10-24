@@ -2,6 +2,6 @@
 
 int main(void)
 {
-    printf("Hi my name is %s and i am %d years %% old  \n", "ahmed", 25);
+    ft_printf("str => %s \nnbr => %d ", "ahmed", 123);
     return (0);
 }

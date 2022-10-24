@@ -6,7 +6,7 @@
 /*   By: aerrajiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:50:48 by aerrajiy          #+#    #+#             */
-/*   Updated: 2022/10/23 20:52:15 by aerrajiy         ###   ########.fr       */
+/*   Updated: 2022/10/24 02:01:17 by aerrajiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,4 @@ int ft_putnbr(int fd, int n)
 		write(fd, &n, 1);
 	}
     return (count_digits(n));
-}
-
-int main()
-{
-	printf("--%d--", ft_putnbr(1, -123));
-	return (0);
 }
