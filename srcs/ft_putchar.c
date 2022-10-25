@@ -6,14 +6,14 @@
 /*   By: aerrajiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:50:12 by aerrajiy          #+#    #+#             */
-/*   Updated: 2022/10/23 18:09:14 by aerrajiy         ###   ########.fr       */
+/*   Updated: 2022/10/24 15:55:58 by aerrajiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fnc_src.h"
 
-int ft_putchar(int fd, char c)
+int	ft_putchar(int fd, char c)
 {
-    write(fd, &c, 1);
-    return (1);
+	write(fd, &c, 1);
+	return (1);
 }

@@ -6,16 +6,19 @@
 /*   By: aerrajiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:51:21 by aerrajiy          #+#    #+#             */
-/*   Updated: 2022/10/23 20:54:33 by aerrajiy         ###   ########.fr       */
+/*   Updated: 2022/10/24 17:47:54 by aerrajiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fnc_src.h"
-int count_digits(long n)
+
+int	count_digits(long n)
 {
-	int i;
+	int	i;
+	if(n == 0)
+		return (1);
 	i = 0;
-	if(n < 0)
+	if (n < 0)
 	{
 		n = -n;
 		i++;
@@ -28,8 +31,10 @@ int count_digits(long n)
 	return (i);
 }
 
-int ft_putunsigned(int fd, unsigned int n)
+int	ft_putunsigned(int fd, unsigned int n)
 {
+	int	c;
+
 	if (n < 0)
 	{
 		write(fd, "-", 1);
@@ -42,8 +47,9 @@ int ft_putunsigned(int fd, unsigned int n)
 	}
 	else
 	{
-		n += 48;
-		write(fd, &n, 1);
+		c = n + 48;
+		write(fd, &c, 1);
 	}
-    return (count_digits(n));
+
+	return (count_digits(n));
 }
