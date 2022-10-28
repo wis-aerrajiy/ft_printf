@@ -6,7 +6,7 @@
 /*   By: aerrajiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 18:26:53 by aerrajiy          #+#    #+#             */
-/*   Updated: 2022/10/24 18:27:06 by aerrajiy         ###   ########.fr       */
+/*   Updated: 2022/10/27 22:43:40 by aerrajiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ int	show(va_list ptr, char c)
 		count += ft_put_hex(1, c, va_arg(ptr, unsigned));
 	if (c == 'p')
 		count += ft_put_address(1, (long) va_arg(ptr, long));
-	if(c == '%')
+	if (c == '%')
 		count += ft_putchar(1, '%');
 	return (count);
 }
 
-int	ft_printf(char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	va_list	ptr;
 	int		i;
@@ -43,6 +43,8 @@ int	ft_printf(char *str, ...)
 	i = 0;
 	count = 0;
 	va_start(ptr, str);
+	if (safezone(str))
+		return (0);
 	while (str[i])
 	{
 		if (str[i] == '%')

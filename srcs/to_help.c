@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   to_help.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aerrajiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/23 18:11:06 by aerrajiy          #+#    #+#             */
-/*   Updated: 2022/10/27 20:47:54 by aerrajiy         ###   ########.fr       */
+/*   Created: 2022/10/27 22:35:21 by aerrajiy          #+#    #+#             */
+/*   Updated: 2022/10/27 22:42:20 by aerrajiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "fnc_src.h"
 
-# include <stdarg.h>
-# include <unistd.h>
-# include <limits.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include "srcs/fnc_src.h"
-
-int	ft_printf(const char *str, ...);
-int	show(va_list ptr, char c);
-
-#endif
+int safezone(const char *str)
+{
+    if (ft_strlen(str) == 1 && str[0] == '%')
+        return (1);
+    return (0);
+}

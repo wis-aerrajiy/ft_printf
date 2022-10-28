@@ -6,7 +6,7 @@
 /*   By: aerrajiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:50:31 by aerrajiy          #+#    #+#             */
-/*   Updated: 2022/10/24 17:13:23 by aerrajiy         ###   ########.fr       */
+/*   Updated: 2022/10/27 01:28:26 by aerrajiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 int	ft_putstr(int fd, char *s)
 {
 	int	i;
-	if(!s)
+
+	if (!s)
 		return (ft_putstr(fd, "(null)"));
 	i = 0;
 	while (s[i])

@@ -6,13 +6,15 @@
 /*   By: aerrajiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 17:11:31 by aerrajiy          #+#    #+#             */
-/*   Updated: 2022/10/24 18:27:10 by aerrajiy         ###   ########.fr       */
+/*   Updated: 2022/10/27 23:36:10 by aerrajiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int main()
+int main(void)
 {
-    ft_printf("%x", -10);
+	int x = printf("%");
+	ft_printf ("%d", x);
+	return (0);
 }

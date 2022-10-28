@@ -6,7 +6,7 @@
 /*   By: aerrajiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:51:21 by aerrajiy          #+#    #+#             */
-/*   Updated: 2022/10/24 17:47:54 by aerrajiy         ###   ########.fr       */
+/*   Updated: 2022/10/27 20:45:19 by aerrajiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,5 @@ int	ft_putunsigned(int fd, unsigned int n)
 		c = n + 48;
 		write(fd, &c, 1);
 	}
-
 	return (count_digits(n));
 }

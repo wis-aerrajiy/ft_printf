@@ -6,7 +6,7 @@
 /*   By: aerrajiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:50:48 by aerrajiy          #+#    #+#             */
-/*   Updated: 2022/10/24 17:43:15 by aerrajiy         ###   ########.fr       */
+/*   Updated: 2022/10/27 20:45:08 by aerrajiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,5 @@ int	ft_putnbr(int fd, int n)
 		c = n + 48;
 		write(fd, &c, 1);
 	}
-
 	return (count_digits(n));
 }
